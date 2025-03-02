@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login met Iris</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .scan-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        #video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .scan-status {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login met Iris Scan</h1>
+        <div class="scan-container">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas" style="display:none"></canvas>
+        </div>
+        <div class="scan-status" id="status">Plaats uw oog voor de camera</div>
+        <button id="loginBtn">Login met Iris</button>
+    </div>
+    <script src="js/iris-login.js"></script>
+</body>
+</html>
